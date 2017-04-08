@@ -88,7 +88,7 @@ gulp.task('scripts', [], function () {
 	);
 
 	return stream.done()
-		.pipe(concat('app-concat.js'))
+		// .pipe(concat('app-concat.js'))
 		.pipe(gulp.dest(dist + '/js'))
 		.pipe(livereload());
 });
@@ -100,7 +100,7 @@ gulp.task('styles', [], function () {
 
 	stream.queue(
 		gulp.src(paths.css)
-			.pipe(concat('styles.css'))
+			// .pipe(concat('styles.css'))
 	);
 
 	// stream.queue(
@@ -114,7 +114,7 @@ gulp.task('styles', [], function () {
 	stream.on('error', handleError);
 
 	return stream.done()
-		.pipe(concat('app-concat.css'))
+		// .pipe(concat('app-concat.css'))
 		.pipe(gulp.dest(dist + '/css'))
 		.pipe(livereload());
 });
