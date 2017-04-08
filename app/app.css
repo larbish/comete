@@ -1,25 +1,21 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+.app-content {
+  z-index: 10;
+  background-image: url("img/bg.jpg");
 }
 
-.menu:before {
-  content: "[";
+.navigation {
+  position: relative;
 }
 
-.menu:after {
-  content: "]";
-}
+.navigation-aside {
+  z-index: 100;
+  position: fixed;
+  overflow-y: auto;
+  background-color: red;
+  /*height: calc(100vh - 120px);*/
+  /*width: $left-nav-width-md;*/
+  /*border-right: 1px solid $grey2;*/
 
-.menu > li {
-  display: inline;
-}
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
 }
