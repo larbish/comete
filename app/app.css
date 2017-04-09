@@ -1,9 +1,12 @@
 /* app css stylesheet */
 
-.app-content {
-  z-index: 10;
-  background-image: url("img/bg.jpg");
+.home {
+  height: 100vh;
+  background: url("img/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
+
+/*############################## NAVIGATION ######################################*/
 
 .navigation {
   position: relative;
@@ -11,11 +14,61 @@
 
 .navigation-aside {
   z-index: 100;
-  position: fixed;
-  overflow-y: auto;
-  background-color: red;
+  height: 100vh;
+  width: 200px;
+  overflow-y: hidden;
+  /*text-align: center;*/
   /*height: calc(100vh - 120px);*/
   /*width: $left-nav-width-md;*/
   /*border-right: 1px solid $grey2;*/
+}
+
+.navigation-open {
+  background-color: rgba(71, 113, 135, 0.5);
+}
+
+/*.menu {
+  padding-top: 20%;
+}*/
+
+.menu {
+  display: table-cell;
+  width: 200px;
+  height: inherit;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.inner {
+  display: inline-block;
+  height: auto;
+  margin-bottom: 56px;
+}
+
+.menu-list {
+  color: white;
+  font-size: 18px;
+}
+
+.menu-list > li {
+  padding-bottom: 20%;
+}
+
+.icon {
+  color: white;
+}
+
+.icon:hover {
+  color: rgb(230, 230, 230);
+}
+
+.icon-menu {
+  margin-top: 10%;
+}
+
+
+/*############################## Mixgen ######################################*/
+
+.padding-top-lg {
 
 }
