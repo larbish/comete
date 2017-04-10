@@ -1,9 +1,14 @@
-/* app css stylesheet */
+/*############################## HOME ######################################*/
 
 .home {
   height: 100vh;
-  background: url("img/bg.jpg") no-repeat center center fixed;
+  background: url("img/home/bg.jpg") no-repeat center center fixed;
   background-size: cover;
+  padding-left: 200px;
+}
+
+.logo {
+  text-align: center;
 }
 
 /*############################## NAVIGATION ######################################*/
@@ -17,19 +22,11 @@
   height: 100vh;
   width: 200px;
   overflow-y: hidden;
-  /*text-align: center;*/
-  /*height: calc(100vh - 120px);*/
-  /*width: $left-nav-width-md;*/
-  /*border-right: 1px solid $grey2;*/
 }
 
 .navigation-open {
   background-color: rgba(71, 113, 135, 0.5);
 }
-
-/*.menu {
-  padding-top: 20%;
-}*/
 
 .menu {
   display: table-cell;
