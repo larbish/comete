@@ -1,11 +1,11 @@
 <div class="navigation">
 	<div class="navigation-aside" ng-init="vm.open = false" ng-class="{'navigation-open': vm.open, 'aosp-fix': isAosp, 'no-chrome': !isChrome}">
 		<div class="menu text-center">
-			<div class="icon-menu text-center" ng-if="!vm.open">
+			<div class="icon-menu" ng-if="!vm.open">
 				<a class="icon" href="" ng-click="vm.open = true"><i class="fa fa-bars fa-4x"></i></a>
 			</div>
 			<a class="icon pull-right" href="" ng-if="vm.open" ng-click="vm.open = false"><i class="fa fa-times fa-4x"></i></a>
-			<div class="inner" ng-if="vm.open">
+			<div class="inner text-center" ng-if="vm.open">
 				<ul class="list-unstyled menu-list">
 					<li>
 						<strong class="text-uppercase">Projet</strong>
