@@ -4,7 +4,7 @@ angular
 	])
 
 	.config(function ($urlRouterProvider, $stateProvider, $locationProvider) {
-		$locationProvider.html5Mode(true).hashPrefix('!');
+		$locationProvider.html5Mode(true);
 		$locationProvider.html5Mode({
 		  enabled: true,
 		  requireBase: false
