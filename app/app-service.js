@@ -1,17 +1,18 @@
 angular.module('app')
-  .factory('App', function() {
+
+  .factory('AppService', function() {
+
+     var data = {
+      navOpen: false
+    };
+
     return {
-      isNavOpen: isNavOpen,
-			toggleNav: toggleNav
-		};
-
-    var isNavOpen = true;
-
-    function isNavOpen () {
-      return isNavOpen;
-    }
-
-    function toggleNav () {
-      isNavOpen = !isNavOpen;
-    }
+      isNavOpen: function () {
+        return data.navOpen;
+      },
+      toggleNav: function () {
+        data.navOpen = !data.navOpen;
+        return data.navOpen;
+      }
+    };
 });
