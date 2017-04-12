@@ -1,6 +1,6 @@
 var streamqueue = require('streamqueue');
 var eventStream = require('event-stream');
-
+var preprocess = require('gulp-preprocess');
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -17,8 +17,8 @@ var dist = 'dist';
 var paths = {
 	scripts: {
 		libs: [
-			components + '/angular/angular.js',
-			components + '/angular-route/angular-route.js'
+			app + '/' + components + '/angular/angular.js',
+			app + '/' + components + '/angular-ui-router/release/angular-ui-router.js'
 		],
 		src: [
 			app + '.js',
@@ -26,11 +26,14 @@ var paths = {
 		]
 	},
 	partials: [
+		app + '.js',
+
 		app + '/**/*.html',
 		'!' + app + '/index.html'
 	],
 	css: [
 		app + '.css',
+		app + '/**/*.css',
 	],
 	// sass: {
 	// 	libs: [
@@ -44,11 +47,10 @@ var paths = {
 	// 		app + '/**/*-module.scss'
 	// 	]
 	// },
-	images: app + '/**/*.{png,jpg,svg,gif,ico}',
+	// images: app + '/**/*.{png,jpg,svg,gif,ico}',
 	misc: [{
 		src: [
-			app + '/index.html',
-			app + '/robots.txt'
+			app + '/index.html'
 		],
 		dest: dist + '/',
 		replace: true
@@ -72,8 +74,9 @@ gulp.task('scripts', [], function () {
 
 	stream.queue(
 		gulp.src(paths.scripts.src)
-			// .pipe(concat('src.js'))
-			.pipe(uglify())
+			.pipe(preprocess())
+			.pipe(concat('src.js'))
+			// .pipe(uglify())
 	);
 
 	stream.queue(
@@ -88,7 +91,7 @@ gulp.task('scripts', [], function () {
 	);
 
 	return stream.done()
-		// .pipe(concat('app-concat.js'))
+		.pipe(concat('app-concat.js'))
 		.pipe(gulp.dest(dist + '/js'))
 		.pipe(livereload());
 });
@@ -100,7 +103,7 @@ gulp.task('styles', [], function () {
 
 	stream.queue(
 		gulp.src(paths.css)
-			// .pipe(concat('styles.css'))
+			.pipe(concat('styles.css'))
 	);
 
 	// stream.queue(
@@ -114,7 +117,8 @@ gulp.task('styles', [], function () {
 	stream.on('error', handleError);
 
 	return stream.done()
-		// .pipe(concat('app-concat.css'))
+		// .pipe(concat('app-' + hashedAppVersion + '.css'))
+		// .pipe(gulpif(env !== 'development', cleanCss({compatibility: 'ie8'})))
 		.pipe(gulp.dest(dist + '/css'))
 		.pipe(livereload());
 });
