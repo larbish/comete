@@ -1,8 +1,6 @@
 /*############################## UTILS ######################################*/
 
-.white {
-  color: white;
-}
+
 
 /*############################## HOME ######################################*/
 
@@ -78,6 +76,20 @@
   height: auto;
 }
 
+.menu-text {
+  color: white;
+}
+
+.menu-text:hover, .menu-text:visited {
+  color: rgb(230, 230, 230);
+  text-decoration: none;
+}
+
+/*.menu-text:visited {
+  color: rgb(230, 230, 230);
+  text-decoration: none;
+}*/
+
 .menu-list {
   color: white;
   font-size: 18px;
@@ -87,12 +99,20 @@
   padding-bottom: 30%;
 }
 
-.icon {
+.icon-white {
   color: white;
 }
 
-.icon:hover {
+.icon-white:hover {
   color: rgb(230, 230, 230);
+}
+
+.icon-blue {
+  color: rgb(50, 55, 118);
+}
+
+.icon-blue:hover {
+  color: rgb(46, 49, 81);
 }
 
 .icon-menu {

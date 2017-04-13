@@ -5,6 +5,8 @@ angular.module('app')
 
 		vm.isNavOpen = AppService.isNavOpen();
 
+		console.log(vm.isNavOpen);
+
 		vm.toggleNav = function () {
 			vm.isNavOpen = AppService.toggleNav();
 		}

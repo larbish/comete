@@ -32,6 +32,7 @@ var paths = {
 	],
 	css: [
 		components + '/bootstrap/dist/css/bootstrap.css',
+		components + '/components-font-awesome/css/font-awesome.css',
 		app + '.css',
 		app + '/**/*.css'
 	],
@@ -42,7 +43,14 @@ var paths = {
 		],
 		dest: dist + '/',
 		replace: true
-	}]
+	},{
+		src: [
+			components + '/components-font-awesome/fonts/fontawesome-webfont.*'
+		],
+		dest: dist + '/fonts/',
+		replace: false
+	}
+]
 };
 
 function handleError(err) {
