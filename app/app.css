@@ -4,24 +4,23 @@
   color: white;
 }
 
-
-
 /*############################## HOME ######################################*/
 
 .home {
   height: 100vh;
-  background: url("img/home/bg.jpg") no-repeat center center fixed;
+  background: url("../img/home/bg.jpg") no-repeat center center fixed;
   background-size: cover;
   /*padding-left: 200px;*/
 }
 
-.container {
+.parent {
+    position: relative;
     height: 100%;
     text-align: center;  /* align the inline(-block) elements horizontally */
     font: 0/0 a;         /* remove the gap between inline(-block) elements */
 }
 
-.container:before {    /* create a full-height inline block pseudo=element */
+.parent:before {    /* create a full-height inline block pseudo=element */
     content: ' ';
     display: inline-block;
     vertical-align: middle;  /* vertical alignment of the inline element */
@@ -34,16 +33,12 @@
     font: 16px/1 Arial sans-serif;        /* <-- reset the font property */
 }
 
-/*.container {
-  position: relative;
-}
-
 .vmiddle {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}*/
+}
 
 .logo {
   text-align: center;
@@ -60,8 +55,6 @@
   top: 0;
   bottom: 0;
 }
-
-/*position: absolute; height: auto; width: 200px; left: 0; right: auto; top: 0; bottom: 0;*/
 
 .navigation-aside {
   height: 100%;
@@ -110,7 +103,7 @@
 /*############################## PROJECT ######################################*/
 .project {
   height: 100vh;
-  background: url("img/project/bg.jpg") no-repeat top center;
+  background: url("../img/project/bg.jpg") no-repeat top center;
   background-size: cover;
   /*padding-left: 200px;*/
 }

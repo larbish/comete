@@ -17,37 +17,25 @@ var dist = 'dist';
 var paths = {
 	scripts: {
 		libs: [
-			app + '/' + components + '/angular/angular.js',
-			app + '/' + components + '/angular-ui-router/release/angular-ui-router.js'
+			components + '/angular/angular.js',
+			components + '/angular-ui-router/release/angular-ui-router.js'
 		],
 		src: [
-			app + '.js',
-			app + '/**/*.js'
+			app + '/**/*-module.js',
+			app + '/app-module.js',
+			app + '/**/*.js',
 		]
 	},
 	partials: [
-		app + '.js',
-
 		app + '/**/*.html',
 		'!' + app + '/index.html'
 	],
 	css: [
+		components + '/bootstrap/dist/css/bootstrap.css',
 		app + '.css',
-		app + '/**/*.css',
+		app + '/**/*.css'
 	],
-	// sass: {
-	// 	libs: [
-	// 		components + '/slick-carousel/slick/slick.scss'
-	// 	],
-	// 	utils: [
-	// 		app + '/components'
-	// 	],
-	// 	src: [
-	// 		app + '/app-module.scss',
-	// 		app + '/**/*-module.scss'
-	// 	]
-	// },
-	// images: app + '/**/*.{png,jpg,svg,gif,ico}',
+	images: app + '/img/*/*.{png,jpg,svg,gif,ico}',
 	misc: [{
 		src: [
 			app + '/index.html'
@@ -69,13 +57,13 @@ gulp.task('scripts', [], function () {
 
   stream.queue(
 		gulp.src(paths.scripts.libs)
-			.pipe(uglify())
+			// .pipe(uglify())
 	);
 
 	stream.queue(
 		gulp.src(paths.scripts.src)
-			.pipe(preprocess())
-			.pipe(concat('src.js'))
+			// .pipe(preprocess())
+			// .pipe(concat('src.js'))
 			// .pipe(uglify())
 	);
 
@@ -123,12 +111,12 @@ gulp.task('styles', [], function () {
 		.pipe(livereload());
 });
 
-// gulp.task('images', [], function () {
-// 	return gulp.src(paths.images)
-// 		.pipe(imagemin())
-// 		.pipe(gulp.dest(dist + '/img/'))
-// 		.pipe(livereload());
-// });
+gulp.task('images', [], function () {
+	return gulp.src(paths.images)
+		// .pipe(imagemin())
+		.pipe(gulp.dest(dist + '/img'))
+		.pipe(livereload());
+});
 
 gulp.task('misc', [], function () {
 	return eventStream.merge.apply(null, paths.misc.map(function (item) {
@@ -145,27 +133,25 @@ gulp.task('clean', [], function () {
 	}));
 });
 
-// gulp.task('watch', [], function () {
-// 	livereload.listen();
-// 	[
-// 		gulp.watch([paths.scripts.src, paths.partials], ['lint', 'scripts']),
-// 		gulp.watch([paths.css, paths.sass.src, paths.sass.utils.concat(paths.sass.libs).map(function (p) {
-// 			return p + '/**/*.scss';
-// 		})], ['styles']),
-// 		gulp.watch(paths.images, ['images']),
-// 		gulp.watch(paths.fonts, ['fonts']),
-// 		gulp.watch(paths.misc.map(function (item) {
-// 			return item.src;
-// 		}), ['misc'])
-// 	].forEach(function (watch) {
-// 		watch.on('change', function (event) {
-// 			console.log('File %s was %s, running tasks...', event.path, event.type);
-// 		});
-// 	});
-// });
+gulp.task('watch', [], function () {
+	livereload.listen();
+	[
+		gulp.watch([paths.scripts.src, paths.partials], ['scripts']),
+		gulp.watch([paths.css], ['styles']),
+		gulp.watch(paths.images, ['images']),
+		gulp.watch(paths.misc.map(function (item) {
+			return item.src;
+		}), ['misc'])
+	].forEach(function (watch) {
+		watch.on('change', function (event) {
+			console.log('File %s was %s, running tasks...', event.path, event.type);
+		});
+	});
+});
 
 gulp.task('default', [
 	'scripts',
 	'styles',
-	'misc'
+	'misc',
+	'images'
 ]);
