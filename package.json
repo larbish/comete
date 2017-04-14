@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "description": "Official Comète festival website",
-  "repository": "https://github.com/angular/angular-seed",
+  "repository": "https://github.com/larbish/comete",
   "license": "MIT",
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install",
