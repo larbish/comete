@@ -1,7 +1,7 @@
 <!-- <header ui-view="header"></header> -->
-<aside ui-view="aside" class="right"></aside>
+<aside ui-view="aside"></aside>
 <section>
-	<div class="app-content" ui-view></div>
+	<div class="app-content overflow-hidden" ui-view></div>
 	<!-- <back-top><i class="fa fa-chevron-up fa-lg"></i></back-top> -->
 </section>
-<footer ui-view="footer" id="footer" class="footer"></footer>
+<footer ui-view="footer" id="footer" ng-if="!('home' | isState)"></footer>

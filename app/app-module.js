@@ -17,11 +17,10 @@ angular
 					templateUrl: 'app.html',
 					controller: 'AppController as vm'
 				},
-        // ,
-				// 'footer@app': {
-				// 	templateUrl: 'footer/footer.html',
-				// 	controller: 'FooterController as vm'
-				// },
+				'footer@app': {
+					templateUrl: 'footer/footer.html',
+					controller: 'FooterController as vm'
+				},
 				'aside@app': {
 					templateUrl: 'navigation/navigation.html',
 					controller: 'NavigationController as vm'

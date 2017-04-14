@@ -1,5 +1,5 @@
 angular.module('app')
 
-	.controller('NavigationController', function (AppService) {
+	.controller('FooterController', function (AppService) {
 		var vm = this;
 	});

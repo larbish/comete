@@ -37214,11 +37214,10 @@ angular
 					templateUrl: 'app.html',
 					controller: 'AppController as vm'
 				},
-        // ,
-				// 'footer@app': {
-				// 	templateUrl: 'footer/footer.html',
-				// 	controller: 'FooterController as vm'
-				// },
+				'footer@app': {
+					templateUrl: 'footer/footer.html',
+					controller: 'FooterController as vm'
+				},
 				'aside@app': {
 					templateUrl: 'navigation/navigation.html',
 					controller: 'NavigationController as vm'
@@ -37315,6 +37314,12 @@ angular.module('app')
 
 angular.module('app')
 
+	.controller('FooterController', function (AppService) {
+		var vm = this;
+	});
+
+angular.module('app')
+
 	.controller('HomeController', function ($scope, AppService) {
 		var vm = this;
 
@@ -37335,8 +37340,6 @@ angular.module('app')
 
 		vm.isNavOpen = AppService.isNavOpen();
 
-		console.log(vm.isNavOpen);
-
 		vm.toggleNav = function () {
 			vm.isNavOpen = AppService.toggleNav();
 		}
@@ -37348,23 +37351,9 @@ angular.module('app')
 		var vm = this;
 	});
 
-angular.module('app')
-
-	.controller('NavigationController', function (AppService) {
-		var vm = this;
-
-		vm.isNavOpen = AppService.isNavOpen();
-
-		console.log(vm.isNavOpen);
-
-		vm.toggleNav = function () {
-			vm.isNavOpen = AppService.toggleNav();
-		}
-	});
-
-angular.module('app').run(['$templateCache', function($templateCache) {$templateCache.put('app.html','<aside ui-view="aside" class="right"></aside><section><div class="app-content" ui-view></div></section>');
+angular.module('app').run(['$templateCache', function($templateCache) {$templateCache.put('app.html','<aside ui-view="aside"></aside><section><div class="app-content overflow-hidden" ui-view></div></section><footer ui-view="footer" id="footer" ng-if="!(\'home\' | isState)"></footer>');
 $templateCache.put('errors/404.html','<div class="home"><div class="home-content"><div class="container-fluid"><h1 class="text-center">Error</h1></div></div></div>');
+$templateCache.put('footer/footer.html','<div class="container-fluid" style="height: 100%"><div class="row" style="height: 100%"><div class="col-xs-2 parent"><div class="element"><p><span class="pull-left">Copyright 2017</span></p><p><span class="pull-left">COMETE FESTIVAL</span></p><p><span class="pull-left">all right reserved</span></p></div></div><div class="col-xs-offset-8 col-xs-2 parent"><div class="element"><p><span class="pull-right">www.cometefestival.fr</span></p><p><span class="pull-right">+ 33 1 43 43 79 79</span></p><p><span class="pull-right">fabio@cometefestival.fr</span></p></div></div></div></div>');
 $templateCache.put('home/home.html','<div class="home"><div class="container-fluid" style="height: 100%"><div class="row" style="height: 100%"><div class="col-xs-3 text-center parent"><div class="element"><img src="img/home/lieu.png" class="img-responsive" alt="lieu"></div></div><div class="col-xs-6 text-center"><div class="row"><div class="col-xs-offset-3 col-xs-6 text-center"><img src="img/home/logo.png" class="img-responsive" alt="logo"></div></div></div><div class="col-xs-3 text-center parent"><div class="element" ng-if="!vm.isNavOpen"><img src="img/home/date.png" class="img-responsive" alt="date"></div></div></div></div></div>');
 $templateCache.put('navigation/navigation.html','<div class="navigation"><div class="navigation-aside" ng-class="{\'navigation-open\': vm.isNavOpen, \'aosp-fix\': isAosp, \'no-chrome\': !isChrome}"><div class="menu text-center"><div class="icon-menu" ng-if="!vm.isNavOpen"><a class="icon-white" ng-class="{\'icon-white\': (\'home\' | isState), \'icon-blue\': !(\'home\' | isState) }" href="" ng-click="vm.toggleNav()"><i class="fa fa-bars fa-4x"></i></a></div><a class="icon-white pull-right" href="" ng-if="vm.isNavOpen" ng-click="vm.toggleNav()"><i class="fa fa-times fa-4x"></i></a><div class="inner text-center" ng-if="vm.isNavOpen"><ul class="list-unstyled menu-list"><li><strong><a class="text-uppercase menu-text" href="" ui-sref="project" class="">Projet</a></strong></li><li><strong class="text-uppercase white">Info</strong></li><li><strong class="text-uppercase white">Programmation</strong></li><li><strong class="text-uppercase white">Billets</strong></li><li><strong class="text-uppercase white">Contacts</strong></li></ul></div></div></div></div>');
-$templateCache.put('project/project.html','<div class="project"><div class="container-fluid" style="height: 100%"></div></div>');
-$templateCache.put('navigation/navigation/navigation.html','<div class="navigation"><div class="navigation-aside" ng-class="{\'navigation-open\': vm.isNavOpen, \'aosp-fix\': isAosp, \'no-chrome\': !isChrome}"><div class="menu text-center"><div class="icon-menu" ng-if="!vm.isNavOpen"><a class="icon-white" ng-class="{\'icon-white\': (\'home\' | isState), \'icon-blue\': !(\'home\' | isState) }" href="" ng-click="vm.toggleNav()"><i class="fa fa-bars fa-4x"></i></a></div><a class="icon-white pull-right" href="" ng-if="vm.isNavOpen" ng-click="vm.toggleNav()"><i class="fa fa-times fa-4x"></i></a><div class="inner text-center" ng-if="vm.isNavOpen"><ul class="list-unstyled menu-list"><li><strong><a class="text-uppercase menu-text" href="" ui-sref="project" class="">Projet</a></strong></li><li><strong class="text-uppercase white">Info</strong></li><li><strong class="text-uppercase white">Programmation</strong></li><li><strong class="text-uppercase white">Billets</strong></li><li><strong class="text-uppercase white">Contacts</strong></li></ul></div></div></div></div>');}]);
+$templateCache.put('project/project.html','<div class="project overflow-hidden"><div class="container-fluid"><h1 class="project-titre text-center" style="color: red">PROJET</h1><div class="row"><div class="col-xs-offset-2 col-xs-8"><div class="project-text text-center"><p>Art, Bien-\xEBtre et D\xE9veloppement Durable sont les ma\xEEtres mots de Com\xE8te. Notre \xE9quipe s\'est fond\xE9e autour de cette id\xE9e qu\'il est possible de s\'\xE9vader, durant un grand rassemblement, en prenant osin des autres, de soi et de ce qui nous entoure.</p><p>Musique, Performances, Art-Th\xE9rapie, Sc\xE9nographie, seront mis \xE0 l\'honneur lors d\'un rendez vous plac\xE9 sous le signe de l\'\xE9change, de l\'ouverture et de la d\xE9couverte.</p><p></p><p>R\xE9veillez-vous avec un cours de yoga \xE0 La Maison Nomade, laissez vous porter par les premi\xE8res notes de la Sc\xE8ne Com\xE8te, puis vibrez dans les univers d\xE9jant\xE9s propos\xE9s par l\'impr\xE9visible For\xEAt Stellaire...</p><p>Bienvenue en plein nature bretonne, au bord d\'un lac pour partager le temps d\'un week-end une exp\xE9rience pluri-culturelle, sensorielle et spirituelle.</p></div></div></div></div></div>');}]);

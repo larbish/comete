@@ -1,6 +1,8 @@
 /*############################## UTILS ######################################*/
 
-
+.overflow-hidden {
+  overflow: hidden;
+}
 
 /*############################## HOME ######################################*/
 
@@ -8,7 +10,7 @@
   height: 100vh;
   background: url("../img/home/bg.jpg") no-repeat center center fixed;
   background-size: cover;
-  /*padding-left: 200px;*/
+  position: relative;
 }
 
 .parent {
@@ -108,7 +110,7 @@
 }
 
 .icon-blue {
-  color: rgb(50, 55, 118);
+  color: rgb(46, 65, 114);
 }
 
 .icon-blue:hover {
@@ -119,16 +121,40 @@
   padding-top: 20%;
 }
 
-/*############################## PROJECT ######################################*/
-.footer {
-  background-color: rgb(50, 55, 118);
+/*############################## FOOTER ######################################*/
+#footer {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: 15%;
+  bottom: 0;
+  background-color: rgb(46, 65, 114);
+  color: white;
 }
 
+.footer-padding {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#footer p {
+  padding-bottom: 10%;
+}
 
 /*############################## PROJECT ######################################*/
 .project {
+  position: relative;
   height: 100vh;
   background: url("../img/project/bg.jpg") no-repeat top center;
   background-size: cover;
   /*padding-left: 200px;*/
+}
+
+.project-titre {
+  padding-top: 5%;
+}
+
+.project-text {
+  font-size: 20px;
+  padding-top: 5%;
 }
