@@ -8,10 +8,10 @@
 			<div class="inner text-center" ng-if="vm.isNavOpen">
 				<ul class="list-unstyled menu-list">
 					<li>
-						<strong><a class="text-uppercase menu-text" href="" ui-sref="project" class="">Projet</a></strong>
+						<strong><a class="text-uppercase menu-text" href="" ui-sref="project" ng-class="{'active': ('project' | isState) }" ng-click="vm.toggleNav()">Projet</a></strong>
 					</li>
 					<li>
-						<strong class="text-uppercase white">Info</strong>
+						<strong><a class="text-uppercase menu-text" href="" ui-sref="infos" ng-class="{'active': ('infos' | isState) }" ng-click="vm.toggleNav()">Infos</a></strong>
 					</li>
 					<li>
 						<strong class="text-uppercase white">Programmation</strong>

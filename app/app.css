@@ -4,6 +4,24 @@
   overflow: hidden;
 }
 
+.border-title-red {
+  border-top: 3px red solid;
+  border-bottom: 3px red solid;
+}
+
+.border-title-blue {
+  border-top: 3px blue solid;
+  border-bottom: 3px blue solid;
+}
+
+.margin-top-30 {
+  margin-top: 30px;
+}
+
+.padding-bottom-20 {
+  padding-bottom: 20px;
+}
+
 /*############################## HOME ######################################*/
 
 .home {
@@ -78,14 +96,24 @@
   height: auto;
 }
 
-.menu-text {
+.menu-text, .menu-text:active {
   color: white;
+  text-decoration: none;
 }
 
-.menu-text:hover, .menu-text:visited {
+.menu-text:hover {
   color: rgb(230, 230, 230);
   text-decoration: none;
 }
+
+.active {
+  color: rgb(230, 230, 230);
+}
+/*
+.menu-text:hover {
+  color: rgb(230, 230, 230);
+  text-decoration: none;
+}*/
 
 /*.menu-text:visited {
   color: rgb(230, 230, 230);
@@ -123,11 +151,11 @@
 
 /*############################## FOOTER ######################################*/
 #footer {
-  position: absolute;
+  position: relative;
   z-index: 1000;
-  width: 100%;
-  height: 15%;
-  bottom: 0;
+  /*width: 100%;*/
+  height: 150px;
+  /*bottom: 0;*/
   background-color: rgb(46, 65, 114);
   color: white;
 }
@@ -144,7 +172,7 @@
 /*############################## PROJECT ######################################*/
 .project {
   position: relative;
-  height: 100vh;
+  /*height: 100vh;*/
   background: url("../img/project/bg.jpg") no-repeat top center;
   background-size: cover;
   /*padding-left: 200px;*/
@@ -157,4 +185,5 @@
 .project-text {
   font-size: 20px;
   padding-top: 5%;
+  padding-bottom: 5%;
 }
