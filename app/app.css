@@ -1,26 +1,41 @@
 /*############################## UTILS ######################################*/
 
-.overflow-hidden {
-  overflow: hidden;
+.noscroll {
+	overflow-y: hidden;
 }
-
 .border-title-red {
-  border-top: 3px red solid;
-  border-bottom: 3px red solid;
+  border-top: 3px rgb(222, 135, 128) solid;
+  border-bottom: 3px rgb(222, 135, 128) solid;
 }
 
 .border-title-blue {
-  border-top: 3px blue solid;
-  border-bottom: 3px blue solid;
+  border-top: 3px rgb(21, 90, 109) solid;
+  border-bottom: 3px rgb(21, 90, 109) solid;
 }
 
-.margin-top-30 {
-  margin-top: 30px;
+.color-blue {
+  color: rgb(21, 90, 109);
 }
 
-.padding-bottom-20 {
-  padding-bottom: 20px;
+.color-red {
+  color: rgb(222, 135, 128);
 }
+
+.padding-top-30 {
+  padding-top: 30px;
+}
+
+.padding-bottom-30 {
+  padding-bottom: 30px;
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+/*.header {
+  height: 20%;
+}*/
 
 /*############################## HOME ######################################*/
 
@@ -138,7 +153,7 @@
 }
 
 .icon-blue {
-  color: rgb(46, 65, 114);
+  color: rgb(21, 90, 109);
 }
 
 .icon-blue:hover {
@@ -146,7 +161,7 @@
 }
 
 .icon-menu {
-  padding-top: 20%;
+  padding-top: 46px;
 }
 
 /*############################## FOOTER ######################################*/
@@ -156,13 +171,14 @@
   /*width: 100%;*/
   height: 150px;
   /*bottom: 0;*/
-  background-color: rgb(46, 65, 114);
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .footer-padding {
   padding-left: 10%;
   padding-right: 10%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #footer p {
@@ -171,18 +187,22 @@
 
 /*############################## PROJECT ######################################*/
 .project {
+  font-family: 'Montserrat', sans-serif;
   position: relative;
-  /*height: 100vh;*/
-  background: url("../img/project/bg.jpg") no-repeat top center;
-  background-size: cover;
-  /*padding-left: 200px;*/
 }
 
 .project-titre {
-  padding-top: 5%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.bg {
+  background: url("../img/project/bg.jpg") no-repeat top center;
+  background-size: cover;
 }
 
 .project-text {
+  color: black;
   font-size: 20px;
   padding-top: 5%;
   padding-bottom: 5%;
