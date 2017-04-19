@@ -37290,6 +37290,17 @@ angular.module('app')
 angular.module('app')
 
 	.config(function ($stateProvider) {
+		$stateProvider.state('programmation', {
+			url: '/programmation',
+			parent: 'app',
+			templateUrl: 'programmation/programmation.html',
+			controller: 'ProgrammationController as vm'
+		});
+	});
+
+angular.module('app')
+
+	.config(function ($stateProvider) {
 		$stateProvider.state('project', {
 			url: '/project',
 			parent: 'app',
@@ -37325,12 +37336,6 @@ angular.module('app')
 
 angular.module('app')
 
-	.controller('FooterController', function (AppService) {
-		var vm = this;
-	});
-
-angular.module('app')
-
 	.controller('HomeController', function ($scope, AppService) {
 		var vm = this;
 
@@ -37342,6 +37347,12 @@ angular.module('app')
       function(newVal, oldVal) {
         vm.isNavOpen = newVal;
     }, true);
+	});
+
+angular.module('app')
+
+	.controller('FooterController', function (AppService) {
+		var vm = this;
 	});
 
 angular.module('app')
@@ -37366,14 +37377,21 @@ angular.module('app')
 
 angular.module('app')
 
+	.controller('ProgrammationController', function () {
+		var vm = this;
+	});
+
+angular.module('app')
+
 	.controller('ProjectController', function ($scope, AppService) {
 		var vm = this;
 	});
 
 angular.module('app').run(['$templateCache', function($templateCache) {$templateCache.put('app.html','<aside ui-view="aside"></aside><section><div class="app-content overflow-hidden" ui-view></div></section><footer ui-view="footer" id="footer" ng-if="!(\'home\' | isState)"></footer>');
 $templateCache.put('errors/404.html','<div class="home"><div class="home-content"><div class="container-fluid"><h1 class="text-center">Error</h1></div></div></div>');
-$templateCache.put('footer/footer.html','<div class="container-fluid" style="height: 100%"><div class="row" style="height: 100%"><div class="col-xs-2 parent"><div class="element"><p><span class="pull-left">Copyright 2017</span></p><p><span class="pull-left">COMETE FESTIVAL</span></p><p><span class="pull-left">all right reserved</span></p></div></div><div class="col-xs-offset-8 col-xs-2 parent"><div class="element"><p><span class="pull-right">www.cometefestival.fr</span></p><p><span class="pull-right">+ 33 1 43 43 79 79</span></p><p><span class="pull-right">fabio@cometefestival.fr</span></p></div></div></div></div>');
 $templateCache.put('home/home.html','<div class="home"><div class="container-fluid" style="height: 100%"><div class="row" style="height: 100%"><div class="col-xs-3 text-center parent"><div class="element"><img src="img/home/lieu.png" class="img-responsive" alt="lieu"></div></div><div class="col-xs-6 text-center"><div class="row"><div class="col-xs-offset-3 col-xs-6 text-center"><img src="img/home/logo.png" class="img-responsive" alt="logo"></div></div></div><div class="col-xs-3 text-center parent"><div class="element" ng-if="!vm.isNavOpen"><img src="img/home/date.png" class="img-responsive" alt="date"></div></div></div></div></div>');
-$templateCache.put('infos/infos.html','<div class="infos" style="overflow:hidden"><div class="container-fluid"><h1 class="project-titre text-center color-red"><strong class="border-title-red">INFOS</strong></h1><div class="row"><div class="col-xs-12"><img src="img/infos/plan.png" class="img-responsive" alt="date"></div></div><div class="row padding-top-30 padding-bottom-30"><div class="col-xs-4 text-center"><h2 class="padding-bottom-20 color-blue"><span class="border-title-blue">voiture</span></h2><p></p><div>A13 -- A28/E402 > D924</div><div>SORTIE 13 de l\'A88</div><p></p><p></p><div>SUIVRE D924 D21 > D217</div><div>sur SAINT ROCH-SUR-EGRENNE</div><p></p></div><div class="col-xs-4 text-center"><h2 class="padding-bottom-20 color-blue"><span class="border-title-blue">train</span></h2><p></p><div>TGV Luitr\xE9</div><div>Lorem Ipsum</div><p></p><p></p><div>Lorem ipsum</div><div>lorem ipsum</div><p></p></div><div class="col-xs-4 text-center"><h2 class="padding-bottom-20 color-blue"><span class="border-title-blue">bus</span></h2><p></p><div>OUI BUS</div><div>> Luitr\xE9</div><p></p><p></p><div>SUIVRE</div><div>Le Boix Le Houx</div><p></p></div></div><div class="no-padding"><img src="img/infos/camping.png" class="img-responsive" alt="date"></div></div></div>');
-$templateCache.put('navigation/navigation.html','<div class="navigation"><div class="navigation-aside" ng-class="{\'navigation-open\': vm.isNavOpen, \'aosp-fix\': isAosp, \'no-chrome\': !isChrome}"><div class="menu text-center"><div class="icon-menu" ng-if="!vm.isNavOpen"><a class="icon-white" ng-class="{\'icon-white\': (\'home\' | isState), \'icon-blue\': !(\'home\' | isState) }" href="" ng-click="vm.toggleNav()"><i class="fa fa-bars fa-4x"></i></a></div><a class="icon-white pull-right" href="" ng-if="vm.isNavOpen" ng-click="vm.toggleNav()"><i class="fa fa-times fa-4x"></i></a><div class="inner text-center" ng-if="vm.isNavOpen"><ul class="list-unstyled menu-list"><li><strong><a class="text-uppercase menu-text" href="" ui-sref="home" ng-class="{\'active\': (\'home\' | isState) }" ng-click="vm.toggleNav()">Home</a></strong></li><li><strong><a class="text-uppercase menu-text" href="" ui-sref="project" ng-class="{\'active\': (\'project\' | isState) }" ng-click="vm.toggleNav()">Projet</a></strong></li><li><strong><a class="text-uppercase menu-text" href="" ui-sref="infos" ng-class="{\'active\': (\'infos\' | isState) }" ng-click="vm.toggleNav()">Infos</a></strong></li><li><strong class="text-uppercase white">Programmation</strong></li><li><strong class="text-uppercase white">Billets</strong></li><li><strong class="text-uppercase white">Contacts</strong></li></ul></div></div></div></div>');
-$templateCache.put('project/project.html','<div class="project overflow-hidden"><div class="container-fluid"><div class="header"><h1 class="project-titre text-center" style="color: rgb(222, 135, 128)"><strong class="border-title-red">PROJET</strong></h1></div><div class="row bg"><div class="col-xs-offset-3 col-xs-6"><div class="project-text text-center"><p>Art, Bien-\xEBtre et D\xE9veloppement Durable sont les ma\xEEtres mots de Com\xE8te. Notre \xE9quipe s\'est fond\xE9e autour de cette id\xE9e qu\'il est possible de s\'\xE9vader, durant un grand rassemblement, en prenant osin des autres, de soi et de ce qui nous entoure.</p><p>Musique, Performances, Art-Th\xE9rapie, Sc\xE9nographie, seront mis \xE0 l\'honneur lors d\'un rendez vous plac\xE9 sous le signe de l\'\xE9change, de l\'ouverture et de la d\xE9couverte.</p><div class="row"><div class="col-xs-offset-5 col-xs-2"><img style="color: black" src="img/project/zig-zag.png" class="img-responsive" alt="zigzag"></div></div><p>R\xE9veillez-vous avec un cours de yoga \xE0 La Maison Nomade, laissez vous porter par les premi\xE8res notes de la Sc\xE8ne Com\xE8te, puis vibrez dans les univers d\xE9jant\xE9s propos\xE9s par l\'impr\xE9visible For\xEAt Stellaire...</p><p>Bienvenue en plein nature bretonne, au bord d\'un lac pour partager le temps d\'un week-end une exp\xE9rience pluri-culturelle, sensorielle et spirituelle.</p></div></div></div></div></div>');}]);
+$templateCache.put('footer/footer.html','<div class="container-fluid" style="height: 100%"><div class="row" style="height: 100%"><div class="col-xs-2 parent"><div class="element"><p><span class="pull-left">Copyright 2017</span></p><p><span class="pull-left">COMETE FESTIVAL</span></p><p><span class="pull-left">all right reserved</span></p></div></div><div class="col-xs-offset-8 col-xs-2 parent"><div class="element"><p><span class="pull-right">www.cometefestival.fr</span></p><p><span class="pull-right">+ 33 1 43 43 79 79</span></p><p><span class="pull-right">fabio@cometefestival.fr</span></p></div></div></div></div>');
+$templateCache.put('infos/infos.html','<div class="infos" style="overflow:hidden"><div class="container-fluid"><h1 class="project-titre text-center color-red"><strong class="border-title-red">INFOS</strong></h1><div class="row"><div class="col-xs-12"><img src="img/infos/plan.png" class="img-responsive" alt="date"></div></div><div class="row padding-top-30 padding-bottom-30"><div class="col-xs-4 text-center"><h2 class="padding-bottom-20 color-blue"><span class="border-title-blue">voiture</span></h2><p></p><div>A13 -- A28/E402 > D924</div><div>SORTIE 13 de l\'A88</div><p></p><p></p><div>SUIVRE D924 D21 > D217</div><div>sur SAINT ROCH-SUR-EGRENNE</div><p></p></div><div class="col-xs-4 text-center"><h2 class="padding-bottom-20 color-blue"><span class="border-title-blue">train</span></h2><p></p><div>TGV Luitr\xE9</div><div>Lorem Ipsum</div><p></p><p></p><div>Lorem ipsum</div><div>lorem ipsum</div><p></p></div><div class="col-xs-4 text-center"><h2 class="padding-bottom-20 color-blue"><span class="border-title-blue">bus</span></h2><p></p><div>OUI BUS</div><div>> Luitr\xE9</div><p></p><p></p><div>SUIVRE</div><div>Le Boix Le Houx</div><p></p></div></div><div class="row"><img src="img/infos/camping.jpg" class="img-responsive" alt="date"></div></div></div>');
+$templateCache.put('navigation/navigation.html','<div class="navigation"><div class="navigation-aside" ng-class="{\'navigation-open\': vm.isNavOpen, \'aosp-fix\': isAosp, \'no-chrome\': !isChrome}"><div class="menu text-center"><div class="icon-menu" ng-if="!vm.isNavOpen"><a class="icon-white" ng-class="{\'icon-white\': (\'home\' | isState), \'icon-blue\': !(\'home\' | isState) }" href="" ng-click="vm.toggleNav()"><i class="fa fa-bars fa-4x"></i></a></div><a class="icon-white pull-right" href="" ng-if="vm.isNavOpen" ng-click="vm.toggleNav()"><i class="fa fa-times fa-4x"></i></a><div class="inner text-center" ng-if="vm.isNavOpen"><ul class="list-unstyled menu-list"><li><strong><a class="text-uppercase menu-text" href="" ui-sref="home" ng-class="{\'active\': (\'home\' | isState) }" ng-click="vm.toggleNav()">Home</a></strong></li><li><strong><a class="text-uppercase menu-text" href="" ui-sref="project" ng-class="{\'active\': (\'project\' | isState) }" ng-click="vm.toggleNav()">Projet</a></strong></li><li><strong><a class="text-uppercase menu-text" href="" ui-sref="infos" ng-class="{\'active\': (\'infos\' | isState) }" ng-click="vm.toggleNav()">Infos</a></strong></li><li><strong><a class="text-uppercase menu-text" href="" ui-sref="programmation" ng-class="{\'active\': (\'programmation\' | isState) }" ng-click="vm.toggleNav()">Programmation</a></strong></li><li><strong class="text-uppercase white">Billets</strong></li><li><strong class="text-uppercase white">Contacts</strong></li></ul></div></div></div></div>');
+$templateCache.put('programmation/programmation.html','<div class="programmation" style="overflow:hidden"><div class="container-fluid"><h1 class="project-titre text-center color-red"><strong class="border-title-red">PROGRAMMATION</strong></h1><div class="row"><div class="col-xs-offset-5 col-xs-2 text-center">Artistre</div></div><div class="row"><div class="col-xs-2 text-center"><img src="img/programmation/camping.jpg" class="img-responsive" alt="date"></div></div></div></div>');
+$templateCache.put('project/project.html','<div class="project overflow-hidden"><div class="container-fluid"><div class="header"><h1 class="project-titre text-center" style="color: rgb(222, 135, 128)"><strong class="border-title-red">PROJET</strong></h1></div><div class="row bg"><div class="col-xs-offset-3 col-xs-6"><div class="project-text text-center"><p>Art, Bien-\xEBtre et D\xE9veloppement Durable sont les ma\xEEtres mots de Com\xE8te. Notre \xE9quipe s\'est fond\xE9e autour de cette id\xE9e qu\'il est possible de s\'\xE9vader, durant un grand rassemblement, en prenant osin des autres, de soi et de ce qui nous entoure.</p><p>Musique, Performances, Art-Th\xE9rapie, Sc\xE9nographie, seront mis \xE0 l\'honneur lors d\'un rendez vous plac\xE9 sous le signe de l\'\xE9change, de l\'ouverture et de la d\xE9couverte.</p><div class="row padding-top-30 padding-bottom-30"><div class="col-xs-offset-5 col-xs-2"><img style="color: black" src="img/project/zig-zag.png" class="img-responsive" alt="zigzag"></div></div><p>R\xE9veillez-vous avec un cours de yoga \xE0 La Maison Nomade, laissez vous porter par les premi\xE8res notes de la Sc\xE8ne Com\xE8te, puis vibrez dans les univers d\xE9jant\xE9s propos\xE9s par l\'impr\xE9visible For\xEAt Stellaire...</p><p>Bienvenue en plein nature bretonne, au bord d\'un lac pour partager le temps d\'un week-end une exp\xE9rience pluri-culturelle, sensorielle et spirituelle.</p></div></div></div></div></div>');}]);
