@@ -11,8 +11,13 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-3 text-center parent">
-        <div class="element" ng-if="!vm.isNavOpen"><img src="img/home/date.png" class="img-responsive" alt="date"></div>
+      <div class="col-xs-3">
+        <div class="icon-menu text-center" ng-if="!$root.isNavOpen">
+          <a ng-class="{'icon-white': ('home' | isState), 'icon-blue': !('home' | isState) }" href="" ng-click="vm.toggleNav()"><i class="fa fa-bars fa-4x"></i></a>
+        </div>
+        <div class="text-center parent">
+          <div class="element" ng-if="!$root.isNavOpen"><img src="img/home/date.png" class="img-responsive" alt="date"></div>
+        </div>
       </div>
     </div>
   </div>

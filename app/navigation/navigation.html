@@ -1,11 +1,8 @@
-<div class="navigation">
-	<div class="navigation-aside" ng-class="{'navigation-open': vm.isNavOpen, 'aosp-fix': isAosp, 'no-chrome': !isChrome}">
+<div class="navigation" ng-if="$root.isNavOpen">
+	<div class="navigation-aside" ng-class="{'navigation-open': $root.isNavOpen, 'aosp-fix': isAosp, 'no-chrome': !isChrome}">
 		<div class="menu text-center">
-			<div class="icon-menu" ng-if="!vm.isNavOpen">
-				<a class="icon-white" ng-class="{'icon-white': ('home' | isState), 'icon-blue': !('home' | isState) }" href="" ng-click="vm.toggleNav()"><i class="fa fa-bars fa-4x"></i></a>
-			</div>
-			<a class="icon-white pull-right" href="" ng-if="vm.isNavOpen" ng-click="vm.toggleNav()"><i class="fa fa-times fa-4x"></i></a>
-			<div class="inner text-center" ng-if="vm.isNavOpen">
+			<a class="icon-white pull-right" href="" ng-click="vm.toggleNav()"><i class="fa fa-times fa-4x"></i></a>
+			<div class="inner text-center">
 				<ul class="list-unstyled menu-list">
 					<li>
 						<strong><a class="text-uppercase menu-text" href="" ui-sref="home" ng-class="{'active': ('home' | isState) }" ng-click="vm.toggleNav()">Home</a></strong>

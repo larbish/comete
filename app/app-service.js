@@ -1,18 +1,13 @@
 angular.module('app')
 
-  .factory('AppService', function() {
-
-     var data = {
-      navOpen: false
-    };
+  .factory('AppService', function($rootScope) {
+    $rootScope.isNavOpen = false;
 
     return {
-      isNavOpen: function () {
-        return data.navOpen;
-      },
       toggleNav: function () {
-        data.navOpen = !data.navOpen;
-        return data.navOpen;
+        $rootScope.isNavOpen = !$rootScope.isNavOpen;
+        if ($rootScope.isNavOpen) $rootScope.noscroll = 'noscroll';
+        else $rootScope.noscroll = '';
       }
     };
 });

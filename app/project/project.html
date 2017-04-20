@@ -1,7 +1,16 @@
 <div class="project overflow-hidden">
   <div class="container-fluid">
     <div class="header">
-      <h1 class="project-titre text-center" style="color: rgb(222, 135, 128)"><strong class="border-title-red">PROJET</strong></h1>
+      <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+          <h1 class="project-titre text-center" style="color: rgb(222, 135, 128)"><strong class="border-title-red">PROJET</strong></h1>
+        </div>
+        <div class="col-xs-3">
+          <div class="icon-menu text-center" ng-if="!$root.isNavOpen">
+            <a ng-class="{'icon-white': ('home' | isState), 'icon-blue': !('home' | isState) }" href="" ng-click="vm.toggleNav()"><i class="fa fa-bars fa-4x"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="row bg">
       <div class="col-xs-offset-3 col-xs-6">
