@@ -9096,6 +9096,10 @@ button.close {
 
 /*############################## UTILS ######################################*/
 
+h1 {
+	font-size: 48px !important;
+}
+
 .noscroll {
 	overflow-y: hidden;
 }
@@ -9300,4 +9304,15 @@ button.close {
   font-size: 20px;
   padding-top: 5%;
   padding-bottom: 5%;
+}
+
+/*############################## PROGRAMMATION ######################################*/
+.programmation {
+  font-family: 'Montserrat', sans-serif;
+  /*position: relative;*/
+}
+
+.prog-text {
+  color: black;
+  font-size: 20px;
 }

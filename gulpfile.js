@@ -36,7 +36,11 @@ var paths = {
 		app + '.css',
 		app + '/**/*.css'
 	],
-	images: app + '/img/*/*/*.{png,jpg,svg,gif,ico}',
+	images: [
+		app + '/img/*/*/*.{png,jpg,svg,gif,ico}',
+		app + '/img/*/*.{png,jpg,svg,gif,ico}'
+	],
+	// images: app + '/img/*/*/*.{png,jpg,svg,gif,ico}',
 	misc: [{
 		src: [
 			app + '/index.html'
