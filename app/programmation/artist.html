@@ -1,0 +1,24 @@
+<div class="artist">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-offset-1 col-xs-10">
+        <h1 class="text-center color-blue margin-bottom-30"><strong class="border-title-blue">{{ vm.artist.name }}</strong></h1>
+      </div>
+      <div class="col-xs-1">
+        <a class="icon-blue pull-right" href="" ng-click="vm.close()"><i class="fa fa-times fa-4x"></i></a>
+      </div>
+    </div>
+    <div class="row margin-bottom-30">
+      <div class="col-xs-offset-4 col-xs-4 parent" style="height: 300px">
+        <div class="element">
+          <img src="{{ vm.artist.img }}" class="img-responsive" alt="{{ vm.artist.name }}">
+        </div>
+      </div>
+      <div class="col-xs-4 parent" style="height: 300px">
+          <div class="element">
+            {{ vm.artist.text }}
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

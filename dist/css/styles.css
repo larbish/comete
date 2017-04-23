@@ -9129,6 +9129,18 @@ h1 {
   padding-bottom: 30px;
 }
 
+.margin-top-15 {
+  margin-top: 15px;
+}
+
+.margin-bottom-15 {
+  margin-bottom: 15px;
+}
+
+.margin-bottom-30 {
+  margin-bottom: 30px;
+}
+
 .no-padding {
   padding: 0px;
 }
@@ -9315,4 +9327,46 @@ h1 {
 .prog-text {
   color: black;
   font-size: 20px;
+}
+
+.prog-title {
+	display: block;
+	margin: 0 auto;
+	height: 150px;
+}
+
+.prog-maison {
+	background: url("../img/programmation/bg_maisonNomade.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+/*.prog-green {
+	background: url("../img/programmation/bg_greenResistance.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+}*/
+
+.prog-activities {
+	background: url("../img/programmation/bg_activities.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.artist {
+	background: url("../img/programmation/bg_artist.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.img-artist {
+	cursor: pointer;
+}
+
+.icon-black {
+  color: black;
+}
+
+.icon-black:hover {
+  color: rgb(21, 90, 109);
 }

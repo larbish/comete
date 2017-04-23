@@ -18,6 +18,9 @@ var paths = {
 	scripts: {
 		libs: [
 			components + '/angular/angular.js',
+			components + '/angular-animate/angular-animate.js',
+			components + '/angular-touch/angular-touch.js',
+			components + '/angular-bootstrap/ui-bootstrap-tpls.js',
 			components + '/angular-ui-router/release/angular-ui-router.js'
 		],
 		src: [

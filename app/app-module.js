@@ -1,6 +1,9 @@
 angular
 	.module('app', [
-		'ui.router'
+		'ngTouch',
+		'ngAnimate',
+		'ui.router',
+		'ui.bootstrap'
 	])
 
 	.config(function ($urlRouterProvider, $stateProvider, $locationProvider) {
