@@ -9341,11 +9341,11 @@ h1 {
 	background-position: center;
 }
 
-/*.prog-green {
-	background: url("../img/programmation/bg_greenResistance.jpg") no-repeat;
+.prog-green {
+	background: url("../img/programmation/bg_artist.jpg") no-repeat;
 	background-size: cover;
 	background-position: center;
-}*/
+}
 
 .prog-activities {
 	background: url("../img/programmation/bg_activities.jpg") no-repeat;
