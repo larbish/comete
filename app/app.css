@@ -263,7 +263,14 @@ h1 {
 	background-position: center;
 }
 
+.artist-text {
+	line-height: 150%;
+	text-align: left;
+}
+
 .img-artist {
+	padding-top: 15px;
+	padding-bottom: 15px;	
 	cursor: pointer;
 }
 
