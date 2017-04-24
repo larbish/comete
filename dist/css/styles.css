@@ -9162,7 +9162,7 @@ h1 {
 .element {
 	display: inline-block;
 	vertical-align: middle;  /* vertical alignment of the inline element */
-	font: 16px/1 Arial sans-serif;        /* <-- reset the font property */
+	font: 16px/1 'Montserrat', sans-serif;        /* <-- reset the font property */
 }
 
 /*############################## HOME ######################################*/
@@ -9305,7 +9305,8 @@ h1 {
   padding-bottom: 40px;
 }
 
-.bg {
+.project-bg {
+	height: 600px;
   background: url("../img/project/bg.jpg") no-repeat;
   background-size: cover;
   background-position: center;
@@ -9366,7 +9367,7 @@ h1 {
 
 .img-artist {
 	padding-top: 15px;
-	padding-bottom: 15px;	
+	padding-bottom: 15px;
 	cursor: pointer;
 }
 
