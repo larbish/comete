@@ -107,7 +107,7 @@ h1 {
 }
 
 .navigation-open {
-  background-color: rgba(71, 113, 135, 0.5);
+  background-color: rgba(71, 113, 135, 0.8);
 }
 
 .menu {
@@ -135,7 +135,7 @@ h1 {
 }
 
 .active {
-  color: rgb(230, 230, 230);
+  color: rgb(200, 200, 200);
 }
 /*
 .menu-text:hover {
@@ -150,7 +150,7 @@ h1 {
 
 .menu-list {
   color: white;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .menu-list > li {
@@ -321,6 +321,12 @@ h1 {
   background-position: center;
 }
 
-.contacts-text {
+.contacts-img {
+	display: block;
+	margin: 0 auto;
+	height: 150px;
+}
 
+.contacts-text {
+	color: rgb(21, 90, 109);
 }
