@@ -275,10 +275,52 @@ h1 {
 	cursor: pointer;
 }
 
-.icon-black {
-  color: black;
+/*############################## TICKETS ######################################*/
+.tickets {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
 }
 
-.icon-black:hover {
-  color: rgb(21, 90, 109);
+.tickets-titre {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.tickets-bg {
+	height: 600px;
+  background: url("../img/project/bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.tickets-text {
+	color: black;
+	font-size: 24px;
+}
+
+.tickets-text:hover, .tickets-text:visited {
+	color: black;
+	font-size: 24px;
+}
+
+/*############################## CONTACTS ######################################*/
+.contacts {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+
+.contacts-titre {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.contacts-bg {
+	height: 600px;
+  background: url("../img/project/bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contacts-text {
+
 }

@@ -1,0 +1,28 @@
+<div class="tickets overflow-hidden">
+  <div class="container-fluid">
+    <div class="header">
+      <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+          <h1 class="tickets-titre text-center" style="color: rgb(222, 135, 128)"><strong class="border-title-red">Billets</strong></h1>
+        </div>
+        <div class="col-xs-3">
+          <div class="icon-menu text-center" ng-if="!$root.isNavOpen">
+            <a ng-class="{'icon-white': ('home' | isState), 'icon-blue': !('home' | isState) }" href="" ng-click="vm.toggleNav()"><i class="fa fa-bars fa-4x"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row tickets-bg">
+      <div class="col-xs-offset-3 col-xs-6 parent" style="height: 100%">
+        <div class="text-center element">
+          <p>
+            <a class="tickets-text" target="_blank" href="https://comete.placeminute.com/festival/comete_festival_2_3_4_juin_2017,1,19960.html">placeminute.com</a>
+          </p>
+          <!-- <div style="position:relative;height:0px;width:100%;padding-bottom:56.25%;">
+            <iframe frameborder="0" marginheight="0" marginwidth="0" src="https://comete.placeminute.com/festival/comete_festival_2_3_4_juin_2017,1,19960.html" height="100%" width="100%" style="position:absolute;top:0;left:0;"></iframe>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
