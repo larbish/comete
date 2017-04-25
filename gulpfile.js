@@ -109,14 +109,6 @@ gulp.task('styles', [], function () {
 			.pipe(concat('styles.css'))
 	);
 
-	// stream.queue(
-	// 	gulp.src(paths.sass.src)
-	// 		.pipe(concat('styles.scss'))
-	// 		.pipe(sass({
-	// 			loadPath: components + '/bootstrap-sass/assets/stylesheets/'
-	// 		}).on('error', env !== 'development' ? handleError : sass.logError))
-	// );
-
 	stream.on('error', handleError);
 
 	return stream.done()
@@ -128,7 +120,7 @@ gulp.task('styles', [], function () {
 
 gulp.task('images', [], function () {
 	return gulp.src(paths.images)
-		// .pipe(imagemin())
+		.pipe(imagemin())
 		.pipe(gulp.dest(dist + '/img'))
 		.pipe(livereload());
 });

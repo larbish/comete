@@ -6,7 +6,9 @@ angular.module('app')
 		vm.toggleNav = function () {
 			AppService.toggleNav();
 		}
-		// 
+
+		vm.bg = '../img/project/bg.jpg';
+		//
 		// $scope.$watch(function () {
     //    return AppService.isNavOpen();
     //  },
