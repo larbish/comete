@@ -302,28 +302,69 @@ h1 {
   /*position: relative;*/
 }
 
-.prog-text {
-  color: black;
-  font-size: 20px;
+@media (max-width: 768px) {
+	.prog-title {
+		display: block;
+		margin: 0 auto;
+		height: 75px;
+	}
+
+	.prog-maison {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	.prog-padding {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	.prog-green {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	.prog-text {
+	  color: black;
+	  font-size: 14px;
+	}
 }
 
-.prog-title {
-	display: block;
-	margin: 0 auto;
-	height: 150px;
+@media (min-width: 768px) {
+	.prog-title {
+		display: block;
+		margin: 0 auto;
+		height: 150px;
+	}
+
+	.prog-maison {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.prog-padding {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.prog-green {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.prog-text {
+		color: black;
+		font-size: 20px;
+	}
 }
 
 .prog-maison {
-	padding-top: 30px;
-	padding-bottom: 30px;
 	background: url("../img/programmation/bg_maisonNomade.jpg") no-repeat;
 	background-size: cover;
 	background-position: center;
 }
 
 .prog-green {
-	padding-top: 30px;
-	padding-bottom: 30px;
 	background: url("../img/programmation/bg_artist.jpg") no-repeat;
 	background-size: cover;
 	background-position: center;
