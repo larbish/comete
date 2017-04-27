@@ -9339,12 +9339,16 @@ h1 {
 }
 
 .prog-maison {
+	padding-top: 30px;
+	padding-bottom: 30px;
 	background: url("../img/programmation/bg_maisonNomade.jpg") no-repeat;
 	background-size: cover;
 	background-position: center;
 }
 
 .prog-green {
+	padding-top: 30px;
+	padding-bottom: 30px;
 	background: url("../img/programmation/bg_artist.jpg") no-repeat;
 	background-size: cover;
 	background-position: center;
