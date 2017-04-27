@@ -6,7 +6,8 @@
       </div>
       <div class="col-xs-3">
         <div class="icon-menu text-center" ng-if="!$root.isNavOpen">
-          <a ng-class="{'icon-white': ('home' | isState), 'icon-blue': !('home' | isState) }" href="" ng-click="vm.toggleNav()"><i class="fa fa-bars fa-4x"></i></a>
+          <a class="hidden-xs hidden-sm" ng-class="{'icon-white': ('home' | isState), 'icon-blue': !('home' | isState) }" href="" ng-click="vm.toggleNav()"><i class="fa fa-bars fa-4x"></i></a>
+          <a class="visible-xs visible-sm"ng-class="{'icon-white': ('home' | isState), 'icon-blue': !('home' | isState) }" href="" ng-click="vm.toggleNav()"><i class="fa fa-bars fa-2x"></i></a>
         </div>
       </div>
     </div>
@@ -17,36 +18,36 @@
     </div>
     <div class="row padding-top-30 padding-bottom-30">
       <div class="col-xs-4 text-center">
-        <h2 class="padding-bottom-20 color-blue"><span class="border-title-blue">voiture</span></h2>
+        <h2 class="padding-bottom-20 color-blue infos-title"><span class="border-title-blue">voiture</span></h2>
         <p>
-          <div>A13 -- A28/E402 > D924</div>
-          <div>SORTIE 13 de l'A88</div>
+          <div class="infos-text">A13 -- A28/E402 > D924</div>
+          <div class="infos-text">SORTIE 13 de l'A88</div>
         </p>
         <p>
-          <div>SUIVRE D924 D21 > D217</div>
-          <div>sur SAINT ROCH-SUR-EGRENNE</div>
-        </p>
-      </div>
-      <div class="col-xs-4 text-center">
-        <h2 class="padding-bottom-20 color-blue"><span class="border-title-blue">train</span></h2>
-        <p>
-          <div>TGV Luitré</div>
-          <div>Lorem Ipsum</div>
-        </p>
-        <p>
-          <div>Lorem ipsum</div>
-          <div>lorem ipsum</div>
+          <div class="infos-text">SUIVRE D924 D21 > D217</div>
+          <div class="infos-text">sur SAINT ROCH-SUR-EGRENNE</div>
         </p>
       </div>
       <div class="col-xs-4 text-center">
-        <h2 class="padding-bottom-20 color-blue"><span class="border-title-blue">bus</span></h2>
+        <h2 class="padding-bottom-20 color-blue infos-title"><span class="border-title-blue">train</span></h2>
         <p>
-          <div>OUI BUS</div>
-          <div>> Luitré</div>
+          <div class="infos-text">TGV Luitré</div>
+          <div class="infos-text">Lorem Ipsum</div>
         </p>
         <p>
-          <div>SUIVRE</div>
-          <div>Le Boix Le Houx</div>
+          <div class="infos-text">Lorem ipsum</div>
+          <div class="infos-text">lorem ipsum</div>
+        </p>
+      </div>
+      <div class="col-xs-4 text-center">
+        <h2 class="padding-bottom-20 color-blue infos-title"><span class="border-title-blue">bus</span></h2>
+        <p>
+          <div class="infos-text">OUI BUS</div>
+          <div class="infos-text"> Luitré</div>
+        </p>
+        <p class="infos-text">
+          <div class="infos-text">SUIVRE</div>
+          <div class="infos-text">Le Boix Le Houx</div>
         </p>
       </div>
     </div>

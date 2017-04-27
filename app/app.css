@@ -284,6 +284,18 @@ h1 {
   padding-bottom: 5%;
 }
 
+/*############################## INFOS ######################################*/
+
+@media (max-width: 768px) {
+	.infos-title {
+		font-size: 18px;
+	}
+
+	.infos-text {
+		font-size: 12px !important;
+	}
+}
+
 /*############################## PROGRAMMATION ######################################*/
 .programmation {
   font-family: 'Montserrat', sans-serif;
