@@ -3,17 +3,18 @@
     <div class="header">
       <div class="row">
         <div class="col-xs-offset-3 col-xs-6">
-          <h1 class="tickets-titre text-center" style="color: rgb(222, 135, 128)"><strong class="border-title-red">Billets</strong></h1>
+          <h1 class="project-titre text-center" style="color: rgb(222, 135, 128)"><strong class="border-title-red">Billets</strong></h1>
         </div>
         <div class="col-xs-3">
           <div class="icon-menu text-center" ng-if="!$root.isNavOpen">
-            <a ng-class="{'icon-white': ('home' | isState), 'icon-blue': !('home' | isState) }" href="" ng-click="vm.toggleNav()"><i class="fa fa-bars fa-4x"></i></a>
+            <a class="hidden-xs hidden-sm" ng-class="{'icon-white': ('home' | isState), 'icon-blue': !('home' | isState) }" href="" ng-click="vm.toggleNav()"><i class="fa fa-bars fa-4x"></i></a>
+            <a class="visible-xs visible-sm" ng-class="{'icon-white': ('home' | isState), 'icon-blue': !('home' | isState) }" href="" ng-click="vm.toggleNav()"><i class="fa fa-bars fa-2x"></i></a>
           </div>
         </div>
       </div>
     </div>
     <div class="row tickets-bg">
-      <div class="col-xs-offset-3 col-xs-6 parent" style="height: 100%">
+      <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6 parent" style="height: 100%">
         <div class="text-center element">
           <p>
             <a class="tickets-text" target="_blank" href="https://comete.placeminute.com/festival/comete_festival_2_3_4_juin_2017,1,19960.html">placeminute.com</a>

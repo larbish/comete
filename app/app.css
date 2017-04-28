@@ -69,6 +69,8 @@ h1 {
 	font: 16px/1 'Montserrat', sans-serif;        /* <-- reset the font property */
 }
 
+
+
 /*############################## HOME ######################################*/
 
 .home {
@@ -78,6 +80,11 @@ h1 {
   position: relative;
 }
 
+@media (max-width: 768px) {
+	.margin-home-mobile {
+		margin-top: 50px;
+	}
+}
 
 .vmiddle {
   position: absolute;
@@ -404,6 +411,7 @@ h1 {
   padding-bottom: 40px;
 }
 
+
 .tickets-bg {
 	height: 500px;
   background: url("../img/project/bg.jpg") no-repeat;
@@ -414,6 +422,7 @@ h1 {
 .tickets-text {
 	color: black;
 	font-size: 24px;
+	text-decoration: underline;
 }
 
 .tickets-text:hover, .tickets-text:visited {
@@ -427,13 +436,21 @@ h1 {
   position: relative;
 }
 
-.contacts-titre {
-  padding-top: 40px;
-  padding-bottom: 40px;
+@media (min-width: 768px) {
+	.contacts-bg {
+		height: 500px;
+	}
+}
+
+
+@media (max-width: 768px) {
+	.contact {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
 }
 
 .contacts-bg {
-	height: 500px;
   background: url("../img/project/bg.jpg") no-repeat;
   background-size: cover;
   background-position: center;

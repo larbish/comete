@@ -3,30 +3,31 @@
     <div class="header">
       <div class="row">
         <div class="col-xs-offset-3 col-xs-6">
-          <h1 class="contacts-titre text-center" style="color: rgb(222, 135, 128)"><strong class="border-title-red">Contacts</strong></h1>
+          <h1 class="project-titre text-center" style="color: rgb(222, 135, 128)"><strong class="border-title-red">Contacts</strong></h1>
         </div>
         <div class="col-xs-3">
           <div class="icon-menu text-center" ng-if="!$root.isNavOpen">
-            <a ng-class="{'icon-white': ('home' | isState), 'icon-blue': !('home' | isState) }" href="" ng-click="vm.toggleNav()"><i class="fa fa-bars fa-4x"></i></a>
+            <a class="hidden-xs hidden-sm" ng-class="{'icon-white': ('home' | isState), 'icon-blue': !('home' | isState) }" href="" ng-click="vm.toggleNav()"><i class="fa fa-bars fa-4x"></i></a>
+            <a class="visible-xs visible-sm" ng-class="{'icon-white': ('home' | isState), 'icon-blue': !('home' | isState) }" href="" ng-click="vm.toggleNav()"><i class="fa fa-bars fa-2x"></i></a>
           </div>
         </div>
       </div>
     </div>
-    <div class="row contacts-bg">
-      <div class="col-xs-4 parent" style="height: 100%">
+    <div class="row contacts-bg padding-top-30 padding-bottom-30">
+      <div class="col-xs-12 col-md-4 parent contact" style="height: 100%">
         <div class="contacts-text text-center element">
           <p><img src="img/contacts/presse.png" class="img-responsive contacts-img" alt="Artistpresses"></p>
           <p class="padding-top-30">emilie@cometefestival.fr</p>
         </div>
       </div>
-      <div class="col-xs-4 parent" style="height: 100%">
+      <div class="col-xs-12 col-md-4 parent contact" style="height: 100%">
         <div class="contacts-text text-center element">
           <p><img src="img/contacts/infos.png" class="img-responsive contacts-img" alt="infos"></p>
           <p class="padding-top-30">melanie@cometefestival.fr</p>
 
         </div>
       </div>
-      <div class="col-xs-4 parent" style="height: 100%">
+      <div class="col-xs-12 col-md-4 parent contact" style="height: 100%">
         <div class="contacts-text text-center element">
           <p><img src="img/contacts/partenariats.png" class="img-responsive contacts-img" alt="partenariats"></p>
           <p class="padding-top-30">emilie@cometefestival.fr</p>
