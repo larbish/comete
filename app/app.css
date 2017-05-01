@@ -389,15 +389,34 @@ h1 {
 	background-position: center;
 }
 
+@media (min-width: 768px) {
+	.artist-text {
+		text-align: left;
+	}
+}
+
 .artist-text {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 16px;
 	line-height: 150%;
-	text-align: left;
 }
 
 .img-artist {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	cursor: pointer;
+}
+
+@media (min-width: 768px) {
+	.margin-artist {
+		margin-top: 15px;
+	}
+}
+@media (max-width: 768px) {
+	.margin-artist {
+		margin-bottom: 30px;
+	}
 }
 
 /*############################## TICKETS ######################################*/
