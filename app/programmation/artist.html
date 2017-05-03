@@ -1,7 +1,12 @@
 <div class="artist">
   <div class="container-fluid">
     <div class="row visible-xs visible-sm">
-      <a class="icon-blue pull-right" href="" ng-click="vm.close()"><i class="fa fa-times fa-4x"></i></a>
+      <!--<a class="icon-blue pull-right" href="" ng-click="vm.close()"><i class="fa fa-times fa-4x"></i></a>-->
+      <div class="col-xs-offset-10 col-xs-2">
+        <a class="icon-blue pull-right" href="" ng-click="vm.close()">
+          <img src="img/home/close.png" />
+        </a>
+      </div>
     </div>
     <div class="row">
       <div class="col-xs-offset-1 col-xs-10">
@@ -9,31 +14,34 @@
         <h1 class="text-center color-blue margin-bottom-30 visible-xs visible-sm"><strong>{{ vm.artist.name }}</strong></h1>
       </div>
       <div class="col-xs-1 hidden-xs hidden-sm">
-        <a class="icon-blue pull-right" href="" ng-click="vm.close()"><i class="fa fa-times fa-4x"></i></a>
+        <!--<a class="icon-blue pull-right" href="" ng-click="vm.close()"><i class="fa fa-times fa-4x"></i></a>-->
+        <a class="icon-blue pull-right" href="" ng-click="vm.close()">
+          <img src="img/home/close.png" class="img-responsive margin-top-20">
+        </a>
       </div>
     </div>
     <div class="row margin-artist hidden-xs hidden-sm">
-      <div class="col-md-offset-4 col-md-4 parent" style="height: 450px">
+      <div class="col-md-offset-4 col-md-4 parent" style="height: 500px">
         <div class="element">
           <img src="{{ vm.artist.img }}" class="img-responsive" alt="{{ vm.artist.name }}">
         </div>
       </div>
-      <div class="col-md-4 parent" style="height: 450px">
-          <div class="element artist-text">
-            {{ vm.artist.text }}
-          </div>
+      <div class="col-md-4 parent" style="height: 500px">
+        <div class="element artist-text">
+          {{ vm.artist.text }}
+        </div>
       </div>
     </div>
     <div class="row margin-artist visible-xs visible-sm">
       <div class="col-xs-offset-2 col-xs-8">
         <div class="">
-          <img src="{{ vm.artist.img }}" class="img-responsive" alt="{{ vm.artist.name }}">
+          <img src="{{ vm.artist.img }}" class="img-responsive" alt="{{ vm.artist.name }}" />
         </div>
       </div>
       <div class="col-xs-offset-1 col-xs-10 padding-top-30">
-          <div class="artist-text text-center">
-            {{ vm.artist.text }}
-          </div>
+        <div class="artist-text text-center">
+          {{ vm.artist.text }}
+        </div>
       </div>
     </div>
   </div>

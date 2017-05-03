@@ -35,7 +35,7 @@ angular.module('app')
 			},
 			'camionB': {
 				'name': 'Camion Bazar',
-				'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+				'text': 'Du son qui groove, des performances musicales éclectiques uniques, un décor déjanté avec une équipe de freaks déguisés qui font n’importe quoi, le tout autour d’un fourgon DJ booth : vous êtes bien au Camion Bazar ! Et il paraît que ça se déplace de fête en fête. Eh bien oui, di!cile de nous arrêter : on est la petite scène en roue libre qui fait du bien à ton festival aux grandes scènes. On est le joyeux tapis roulant chaotique de ta petite fête underground. On est une équipe de gais lurons qui décomplexent le public, pour un résultat des plus festifs !',
 				'img': imgPath + 'CamionB.png'
 			},
 			'colJ': {
@@ -60,7 +60,7 @@ angular.module('app')
 			},
 			'houseOfM': {
 				'name': 'House Of Moda',
-				'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+				'text': "Depuis 2011, la House Of Moda réveille la Diva qui sommeille en chacun de nous. Inspirés par la scène voguing new-yorkaise et par l'imagerie de clubs mythiques comme Le Palace, Crame et Reno, fondateurs de la soirée, invitent tous les mois club kids, drag queens et autres créatures à venir parader et danser sur des thèmes tels que Erotica, Futuristica, Diva des Cavernes, Belle en Poubelle... Musique éclectique à tendance électronique, elle fait bouger tous les mois le dancefloor de La Java, et s'exporte à Marseille, Berlin, Nantes...",
 				'img': imgPath + 'HouseofM.png'
 			},
 			'isaacD': {
@@ -86,11 +86,11 @@ angular.module('app')
 			'lazareH': {
 				'name': 'Lazare Hoche',
 				'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-				'img': imgPath + 'LazareH_1.png'
+				'img': imgPath + 'LazareH.png'
 			},
 			'moneyP': {
 				'name': 'Money Penny',
-				'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+				'text': "Djette parisienne aux multiples vies. C’est son mentor Peter Pan - Alexandre Grynszpan membre du duo Polo & Pan - qui lui a insufflé l'amour du rythme. Elle écume rooftops et bars parisiens pour captiver les plus insatiables noctambules de ses influences disco, funk & afro.",
 				'img': imgPath + 'MoneyP.png'
 			},
 			'paradis': {
@@ -100,7 +100,7 @@ angular.module('app')
 			},
 			'rituel': {
 				'name': 'Rituel',
-				'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+				'text': "Véritable cabinet de curiosités et de rencontre RITUEL oeuvre à procurer des moments hors du temps dans des lieux atypiques de la capitale parisienne. Mené par trois amis d’enfance et regroupant aujourd’hui plusieurs artistes, plasticiens, designers et djs/producteurs RITUEL a pour vocation première la rencontre festive de l’art et de la spiritualité. Présents et demandés aujourd’hui par des festivals en France et en Europe pour leur univers polymorphe, ce collectif nomade investit et transforme les espaces qu’ils occupent avec décoration, scénographie, live music, shiatsu, cartomancie ou encore marché artistique.",
 				'img': imgPath + 'Rituel.png'
 			},
 			'romainD': {
