@@ -85,7 +85,7 @@ angular.module('app')
 			},
 			'lazareH': {
 				'name': 'Lazare Hoche',
-				'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+				'text': "Lazare Hoche est un traditionaliste enthousiaste, rempli de récompenses dans le domaine de la House : La touche Lazare c’est un beat hermétique, une bassline qui groove, des nappes hypnotiques et une bonne dose de Soul. Hoche favorise des méthodes  comme les synthés modulaires, les mixes de cassettes et les effets de pédales de guitare pour créer un son toujours personnel et légèrement étrange.",
 				'img': imgPath + 'LazareH.png'
 			},
 			'moneyP': {

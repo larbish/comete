@@ -1,29 +1,34 @@
 <div class="navigation" ng-if="$root.isNavOpen">
 	<div class="navigation-aside" ng-class="{'navigation-open': $root.isNavOpen, 'aosp-fix': isAosp, 'no-chrome': !isChrome}">
 		<div class="menu text-center">
-			<a class="icon-white pull-right" href="" ng-click="vm.toggleNav()"><i class="fa fa-times fa-4x"></i></a>
-			<div class="inner text-center">
-				<ul class="list-unstyled menu-list">
-					<li>
-						<strong><a class="text-uppercase menu-text" href="" ui-sref="home" ng-class="{'active': ('home' | isState) }" ng-click="vm.toggleNav()">Home</a></strong>
-					</li>
-					<li>
-						<strong><a class="text-uppercase menu-text" href="" ui-sref="project" ng-class="{'active': ('project' | isState) }" ng-click="vm.toggleNav()">Projet</a></strong>
-					</li>
-					<li>
-						<strong><a class="text-uppercase menu-text" href="" ui-sref="infos" ng-class="{'active': ('infos' | isState) }" ng-click="vm.toggleNav()">Infos</a></strong>
-					</li>
-					<li>
-						<strong><a class="text-uppercase menu-text" href="" ui-sref="programmation" ng-class="{'active': ('programmation' | isState) }" ng-click="vm.toggleNav()">Programmation</a></strong>
-					</li>
-					<li>
-						<strong><a class="text-uppercase menu-text" href="" ui-sref="tickets" ng-class="{'active': ('tickets' | isState) }" ng-click="vm.toggleNav()">Billets</a></strong>
-					</li>
-					<li>
-						<strong><a class="text-uppercase menu-text" href="" ui-sref="contacts" ng-class="{'active': ('contacts' | isState) }" ng-click="vm.toggleNav()">Contacts</a></strong>
-					</li>
-				</ul>
+			<div class="row">
+				<div class="col-xs-offset-9 col-xs-3">
+					<a class="icon-white pull-right" href="" ng-click="vm.toggleNav()"><img src="img/home/close.png" class="img-responsive" /></a>
+				</div>
 			</div>
+		</div>
+		<div class="inner text-center">
+			<ul class="list-unstyled menu-list">
+				<li>
+					<strong><a class="text-uppercase menu-text" href="" ui-sref="home" ng-class="{'active': ('home' | isState) }" ng-click="vm.toggleNav()">Home</a></strong>
+				</li>
+				<li>
+					<strong><a class="text-uppercase menu-text" href="" ui-sref="project" ng-class="{'active': ('project' | isState) }" ng-click="vm.toggleNav()">Projet</a></strong>
+				</li>
+				<li>
+					<strong><a class="text-uppercase menu-text" href="" ui-sref="infos" ng-class="{'active': ('infos' | isState) }" ng-click="vm.toggleNav()">Infos</a></strong>
+				</li>
+				<li>
+					<strong><a class="text-uppercase menu-text" href="" ui-sref="programmation" ng-class="{'active': ('programmation' | isState) }" ng-click="vm.toggleNav()">Programmation</a></strong>
+				</li>
+				<li>
+					<strong><a class="text-uppercase menu-text" href="" ui-sref="tickets" ng-class="{'active': ('tickets' | isState) }" ng-click="vm.toggleNav()">Billets</a></strong>
+				</li>
+				<li>
+					<strong><a class="text-uppercase menu-text" href="" ui-sref="contacts" ng-class="{'active': ('contacts' | isState) }" ng-click="vm.toggleNav()">Contacts</a></strong>
+				</li>
+			</ul>
+		</div>
 	</div>
 </div>
 </div>

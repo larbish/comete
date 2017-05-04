@@ -29,6 +29,10 @@ h1 {
   padding-top: 30px;
 }
 
+.padding-top-20 {
+  padding-top: 20px;
+}
+
 .padding-bottom-30 {
   padding-bottom: 30px;
 }
@@ -49,8 +53,16 @@ h1 {
   margin-bottom: 30px;
 }
 
+.margin-right-5 {
+  margin-right: 5px;
+}
+
 .no-padding {
   padding: 0px;
+}
+
+.no-padding-left {
+  padding-left: 0px;
 }
 
 .parent {
@@ -99,6 +111,13 @@ h1 {
 
 .logo {
   text-align: center;
+}
+
+
+.social-network {
+	bottom: 30px;
+	position: absolute;
+	padding-left: 30px;
 }
 
 /*############################## NAVIGATION ######################################*/
@@ -307,6 +326,17 @@ h1 {
 	}
 }
 
+.infos-place {
+		font-family: 'Montserrat', sans-serif;	
+}
+
+.infos-text {
+		font-family: 'Montserrat', sans-serif;
+	}
+
+.infos-link {
+		color: black;
+	}
 /*############################## PROGRAMMATION ######################################*/
 .programmation {
   font-family: 'Montserrat', sans-serif;
