@@ -327,7 +327,7 @@ h1 {
 }
 
 .infos-place {
-		font-family: 'Montserrat', sans-serif;	
+		font-family: 'Montserrat', sans-serif;
 }
 
 .infos-text {
@@ -421,6 +421,30 @@ h1 {
 	background: url("../img/programmation/bg_artist.jpg") no-repeat;
 	background-size: cover;
 	background-position: center;
+}
+
+.music {
+	margin: 10px;
+}
+
+.orange, .orange:visited {
+	color: orange;
+	text-decoration: none;
+}
+
+.orange:hover {
+	color: rgb(207, 106, 0);
+	text-decoration: none;
+}
+
+.red, .red:visited {
+	color: red;
+	text-decoration: none;
+}
+
+.red:hover {
+	color: rgb(176, 0, 0);
+	text-decoration: none;
 }
 
 @media (min-width: 768px) {
