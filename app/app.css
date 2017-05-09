@@ -209,12 +209,13 @@ h1 {
   color: rgb(230, 230, 230);
 }
 
-.icon-blue {
+.icon-blue, .icon-blue:visited {
   color: rgb(21, 90, 109);
 }
 
 .icon-blue:hover {
   color: rgb(46, 49, 81);
+	text-decoration: none;
 }
 
 @media (min-width: 768px) {
